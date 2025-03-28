@@ -1,10 +1,189 @@
-body{
-    padding: 0;
-    margin: 0;
+@charset "UTF-8";
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
-header{
-    border: 1px solid red;
-    display: flex;
-    
+/* Styles généraux pour la navbar */
+.navbar-destock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
 }
+
+.liste-lien-destock {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+}
+
+.liste-lien-destock li {
+  margin-right: 120px;
+}
+
+.liste-lien-destock a {
+  text-decoration: none;
+  color: white;
+  font-family: "Spectral";
+  font-size: 1.2rem;
+}
+
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+/* Styles pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+  .liste-lien-destock {
+    display: none;
+  }
+  .burger-icon {
+    display: flex;
+  }
+  .navbar-mobile {
+    position: relative;
+  }
+  .liste-lien-mobile {
+    display: none;
+    list-style: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
+  }
+  .liste-lien-mobile li {
+    margin: 1rem 0;
+  }
+  .liste-lien-mobile a {
+    color: white;
+    text-decoration: none;
+    font-family: "Spectral";
+    font-size: 1.2rem;
+  }
+  .navbar-mobile.active .liste-lien-mobile {
+    display: block;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+main section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+main section h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.8rem;
+  text-align: center;
+}
+main #missions-list {
+  min-height: 100px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+  background: #fff;
+}
+main #candidature-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #candidature-form label {
+  font-weight: bold;
+  color: #555;
+}
+main #candidature-form input, main #candidature-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+main #candidature-form button {
+  background: #007bff;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+main #candidature-form button:hover {
+  background: #0056b3;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+#dashboard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+#dashboard h2 {
+  font-size: 1.5rem;
+  color: red;
+  margin-bottom: 15px;
+}
+
+#candidatures-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#candidatures-list li {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+#candidatures-list li:hover {
+  background-color: #d6d8db;
+}
+
+/*# sourceMappingURL=style.css.map */

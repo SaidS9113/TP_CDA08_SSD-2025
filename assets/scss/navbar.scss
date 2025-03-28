@@ -1,0 +1,94 @@
+/* Styles généraux pour la navbar */
+.navbar-destock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.liste-lien-destock {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 200px;
+}
+
+.liste-lien-destock li {
+    margin-right: 120px;
+}
+
+.liste-lien-destock a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Spectral';
+    font-size: 1.2rem;
+}
+
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+/* Styles pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+    .liste-lien-destock {
+        display: none; 
+  
+    }
+
+    .burger-icon {
+        display: flex; 
+    }
+
+    .navbar-mobile {
+        position: relative;
+
+    }
+
+    .liste-lien-mobile {
+        display: none; 
+        list-style: none;
+        position: relative;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 1rem;
+    }
+
+    .liste-lien-mobile li {
+        margin: 1rem 0;
+    }
+
+    .liste-lien-mobile a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Spectral';
+        font-size: 1.2rem;
+    }
+
+    .navbar-mobile.active .liste-lien-mobile {
+        display: block; 
+    }
+}

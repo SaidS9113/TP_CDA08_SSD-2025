@@ -1,0 +1,43 @@
+h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+// Section Dashboard
+#dashboard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+// Sous-titre de la section
+#dashboard h2 {
+    font-size: 1.5rem;
+    color: red;
+    margin-bottom: 15px;
+}
+
+// Liste des candidatures
+#candidatures-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#candidatures-list li {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #d6d8db;
+    }
+}
