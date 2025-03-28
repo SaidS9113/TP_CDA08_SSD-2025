@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Offres de freelance</title>
 </head>
 <body>
-    
+    <!-- En tete -->
+    <header id="header">
+        <nav class="navbar-destock">
+           <!-- Logo -->
+        <h1 class="logo">InFreelance</h1>
+         <!-- Liste de lien -->
+            <ul class="liste-lien">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="/admin/dashboard.html">Tableau de Bord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Partie des sections : missions disponibles et pour postuler -->
+    <main>
+    <!-- Section des missions disponibles -->
+        <section id="missions">
+            <h2>Missions disponibles</h2>
+            <div id="missions-list"></div>
+        </section>
+        <!-- Section pour postuler -->
+        <section id="postuler">
+            <h2>Postuler</h2>
+            <form id="candidature-form">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" placeholder="Votre nom" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="Votre email" required>
+                
+                <label for="mission-select">Choisissez une mission :</label>
+                <select id="mission-select" required></select>
+                
+                <button type="submit">Postuler</button>
+            </form>
+        </section>
+    </main>
+<script src="/assets/js/script.js"></script>
 </body>
 </html>
