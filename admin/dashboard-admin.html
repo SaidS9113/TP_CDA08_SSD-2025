@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Admin</title>
+</head>
+<body>
+
+  
+    <section id="add-mission">
+        <h2>Ajouter une mission</h2>
+        
+        <ul class="mission-list">
+            <!-- Les missions seront ajoutées ici dynamiquement -->
+        </ul>
+
+        <!-- Formulaire d'ajout de mission -->
+        <form id="candidatures-list">
+            <label for="titre">Titre de la mission :</label>
+            <input type="text" id="titre" required>
+
+            <label for="description">Description :</label>
+            <textarea id="description" required></textarea>
+
+            <label for="duree">Durée :</label>
+            <input type="text" id="duree" required>
+
+            <label for="salaire">Salaire :</label>
+            <input type="text" id="salaire" required>
+
+            <button type="submit">Ajouter la mission</button>
+        </form>
+    </section>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/newMisson.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "missions": [
+    {
+      "id": "6cba",
+      "titre": "développeur back-end",
+      "description": "top",
+      "duree": "6 mois",
+      "salaire": "2500"
+    },
+    {
+      "id": "ba15",
+      "titre": "développeur front-end",
+      "description": "Génial !",
+      "duree": "1 an",
+      "salaire": "1800"
+    },
+    {
+      "id": "c788",
+      "titre": "Développeur symfony",
+      "description": "Top",
+      "duree": "4 ans",
+      "salaire": "2700"
+    }
+  ],
+  "candidatures": [
+    {
+      "id": "da31",
+      "nom": "SAID",
+      "email": "p@gmail.com",
+      "missionId": "6cba"
+    },
+    {
+      "id": "469b",
+      "nom": "p",
+      "email": "porche@gmail.com",
+      "missionId": "6cba"
+    }
+  ]
+}

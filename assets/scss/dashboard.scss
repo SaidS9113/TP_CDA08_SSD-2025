@@ -6,7 +6,7 @@ h1 {
     padding: 10px 0;
 }
 
-// Section Dashboard
+/* Section Dashboard */
 #dashboard {
     background-color: #fff;
     border-radius: 8px;
@@ -17,27 +17,44 @@ h1 {
     width: 90%;
 }
 
-// Sous-titre de la section
+/* Sous-titre de la section */
 #dashboard h2 {
     font-size: 1.5rem;
     color: red;
     margin-bottom: 15px;
 }
 
-// Liste des candidatures
+/* Liste des candidatures */
 #candidatures-list {
     list-style-type: none;
     padding-left: 0;
 }
 
+/* Style de chaque mission */
 #candidatures-list li {
     background-color: #e9ecef;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;  /* Bordure pour séparer les missions */
     transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: #d6d8db;
-    }
 }
+
+/* Effet hover pour les missions */
+#candidatures-list li:hover {
+    background-color: #d6d8db;
+}
+
+/* Ajout d'espacement entre les missions */
+#candidatures-list li:not(:last-child) {
+    margin-bottom: 15px; /* Espacement entre chaque mission */
+}
+
+
+
+/* Ajout de mission */
+
+
+
+
+
