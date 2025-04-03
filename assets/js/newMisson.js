@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour charger et afficher les missions depuis JSON Server
     function loadMissions() {
-        fetch('http://localhost:3001/missions')  // Assurez-vous que l'API est en cours d'exécution sur le port 3001
+        fetch('http://localhost:3000/missions')  // Assurez-vous que l'API est en cours d'exécution sur le port 3000
             .then(response => response.json())
             .then(missions => {
                 missionLists.forEach(missionList => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour envoyer la mission à JSON Server (requête POST)
     function addMission(mission) {
-        fetch('http://localhost:3001/missions', {
+        fetch('http://localhost:3000/missions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour supprimer une mission
     window.deleteMission = function (id) {
-        fetch(`http://localhost:3001/missions/${id}`, {
+        fetch(`http://localhost:3000/missions/${id}`, {
             method: 'DELETE',
         })
         .then(() => {

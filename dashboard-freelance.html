@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link du css pour le design -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Tableau de Bord</title>
 </head>
+
 <body>
-   <!-- En tete -->
-   <header id="header">
-    <!-- Navbar destock -->
-    <nav class="navbar-destock">
-        <!-- Logo -->
-        <h1 class="logo">InFreelance</h1>
-        <!-- Liste de lien pour destock -->
-        <ul class="liste-lien-destock">
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
-            <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
-        </ul>
-        <!-- Navbar mobile -->
-        <div class="navbar-mobile">
-            <button class="burger-icon" id="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <!-- Liste des liens pour petits appareils -->
-            <ul class="liste-lien-mobile" id="mobile-menu">
+    <!-- En tete -->
+    <header id="header">
+        <!-- Navbar destock -->
+        <nav class="navbar-destock">
+            <!-- Logo -->
+            <h1 class="logo">InFreelance</h1>
+            <!-- Liste de lien pour destock -->
+            <ul class="liste-lien-destock">
                 <li><a href="../index.html">Accueil</a></li>
-                <li><a href="/admin/dashboard-freelance.html">Tableau de Bord F</a></li>
+                <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
                 <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
             </ul>
-    </nav>
-</header>
+            <!-- Navbar mobile -->
+            <div class="navbar-mobile">
+                <button class="burger-icon" id="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- Liste des liens pour petits appareils -->
+                <ul class="liste-lien-mobile" id="mobile-menu">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
+                    <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
+                </ul>
+        </nav>
+    </header>
 
-<h1>Tableau de Bord Freelance</h1>
+    <h1>Tableau de Bord Freelance</h1>
 
-<main>
-    <section id="dashboard">
-        <h2>Vos Candidatures</h2>
-        <table id="candidature-table">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Email</th>
-                    <th>Mission</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Les candidatures seront affichées ici -->
-            </tbody>
-        </table>
-    </section>
-</main>
-
-<script src="../assets/js/script.js"></script>
-<script src="/assets/js/candidatureList.js"></script>
+    <main>
+        <section id="dashboard">
+            <h2>Vos Candidatures</h2>
+            <table id="candidature-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Mission</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les candidatures seront affichées ici -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <!-- Link des js pour les fonctionnalités -->
+    <script src="../assets/js/script.js"></script>
+    <script src="/assets/js/candidatureList.js"></script>
 </body>
+
 </html>

@@ -2,11 +2,17 @@
 
 ## 1. Structure du Projet
 
-L'architecture du projet repose sur une organisation claire des fichiers et des dossiers :
+L'Architecture du projet repose sur une organisation claire des fichiers et des dossiers :
 
 ```bash
-mkdir -p ./{assets/img,assets/css,assets/js,back-end-simuler,api} && \
-touch ./{index.html,assets/css/style.css,assets/js/script.js,README.md,back-end-simuler/missions.json}
+mkdir -p TP_CDA08_SAID-SOIDROUDINE-28032025/{assets/{img,css,js,scss},back-end-simuler,admin} && \
+touch TP_CDA08_SAID-SOIDROUDINE-28032025/{index.html,README.md,TASKS,BUGS,dashboard-freelance.html} && \
+touch TP_CDA08_SAID-SOIDROUDINE-28032025/assets/css/style.css && \
+touch TP_CDA08_SAID-SOIDROUDINE-28032025/assets/js/{script.js,candidatureList.js,newCandidature.js,newMission.js,route.js} && \
+touch TP_CDA08_SAID-SOIDROUDINE-28032025/assets/scss/{style.scss,navbar.scss,layout.scss,dashboard.scss,sectionMissions.scss} && \
+touch TP_CDA08_SAID-SOIDROUDINE-28032025/back-end-simuler/missions.json && \
+touch TP_CDA08_SAID-SOIDROUDINE-28032025/admin/dashboard-admin.html
+
 ```
 
 - **assets/img/** : Contient les images utilisées.
@@ -34,7 +40,7 @@ L'utilisation de **Sass (SCSS)** permet d'aller plus vite en imbriquant des attr
 - L'utilisation de variables et de mixins réutilisables.
 - Une compilation automatique en CSS.
 
-Le projet et responsive avec un menu burger pour petite appareille 
+Le projet est responsive pour tout device avec un menu burger pour mobile
 
 ## 5. Fonctionnalités Implémentées
 
@@ -50,7 +56,7 @@ Deux fichiers permettent un suivi efficace :
 - **BUGS** : Liste des bugs à corriger.
 - **TASKS** : Liste des tâches en cours et à venir.
 
-## 7. Versioning
+## 7. Versioning et dépot sur GitHub
 
 Une gestion efficace du code source est assurée par :
 - **Git** pour le suivi des modifications en local.
@@ -68,11 +74,14 @@ Une gestion efficace du code source est assurée par :
 
 ### 
 - Installation du VsCode
-- Installation de node.js pour télécharger le préprocesseur Scss
+- Installation d'un préprocesseur Scss
 - Installation de **Node.js** et **npm**.
 - Installation de **json-server** :
   ```bash
+  npm init -y
   npm install -g json-server
+    npm install sass --save-dev
+    $ sass --watch assets/scss/style.scss:assets/css/style.cs
   ```
 
 ### Lancement du Serveur JSON
@@ -81,10 +90,15 @@ Une gestion efficace du code source est assurée par :
 json-server --watch back-end-simuler/missions.json --port 3000
 ```
 
-### Lancement du Projet
+### Lancement des routes
 
 Ouvrir `index.html` dans un navigateur via Go Live via l'IDE pour voir les routes du back-end :
 
 - http://localhost:3000/missions
 - http://localhost:3000/candidatures
 
+
+### "Hébergement" Lancement en local via Live Serveur du projet
+
+- Installation de Live Server Preview
+- Dans l'ide cliquement sur Go live et un mon projet se demarre en https://127.0.0.1:5500/...

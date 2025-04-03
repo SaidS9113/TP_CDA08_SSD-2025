@@ -4,39 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link du css pour le design -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Offres de freelance</title>
 </head>
 
 <body>
-   <!-- En-tête -->
-<header id="header">
-    <!-- Navbar destock -->
-    <nav class="navbar-destock">
-        <!-- Logo -->
-        <h1 class="logo">InFreelance</h1>
-        <!-- Liste de liens pour destock -->
-        <ul class="liste-lien-destock">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="/admin/dashboard-freelance.html">Tableau de Bord F</a></li>
-            <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
-        </ul>
-        <!-- Navbar mobile -->
-        <div class="navbar-mobile">
-            <button class="burger-icon" id="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <!-- Liste des liens pour petits appareils -->
-            <ul class="liste-lien-mobile" id="mobile-menu">
+    <!-- En-tête -->
+    <header id="header">
+        <!-- Navbar destock -->
+        <nav class="navbar-destock">
+            <!-- Logo -->
+            <h1 class="logo">InFreelance</h1>
+            <!-- Liste de liens pour destock -->
+            <ul class="liste-lien-destock">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="/admin/dashboard-freelance.html">Tableau de Bord</a></li>
-                <li><a href="/admin/dashboard-admin.html">Tableau de Bord</a></li>
+                <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
+                <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
             </ul>
-        </div> 
-    </nav> 
-</header>
+            <!-- Navbar mobile -->
+            <div class="navbar-mobile">
+                <button class="burger-icon" id="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- Liste des liens pour petits appareils -->
+                <ul class="liste-lien-mobile" id="mobile-menu">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
+                    <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 
     <!-- Partie des sections : missions disponibles et pour postuler -->
@@ -49,27 +50,29 @@
             </ul>
         </section>
         <!-- Section pour postuler -->
-      
-    <!-- Section pour postuler -->
-    <section id="postuler">
-        <h2>Postuler</h2>
-        <form id="candidature-form">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" placeholder="Votre nom" required>
 
-            <label for="email">Email :</label>
-            <input type="email" id="email" placeholder="Votre email" required>
+        <!-- Section pour postuler -->
+        <section id="postuler">
+            <h2>Postuler</h2>
+            <form id="candidature-form">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" placeholder="Votre nom" required>
 
-            <label for="mission-select">Choisissez une mission :</label>
-            <select id="mission-select" required>
-                <!-- Les missions seront insérées ici dynamiquement -->
-            </select>
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="Votre email" required>
 
-            <button type="submit">Postuler</button>
-        </form>
-    </section>
+                <label for="mission-select">Choisissez une mission :</label>
+                <select id="mission-select" required>
+                    <!-- Les missions seront insérées ici dynamiquement -->
+                </select>
+
+                <button type="submit">Postuler</button>
+            </form>
+        </section>
 
     </main>
+
+    <!-- Link des js pour les fonctionnalités -->
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/route.js"></script>
     <script src="/assets/js/newCandidature.js"></script>

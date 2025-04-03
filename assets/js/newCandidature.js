@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour charger les missions dans le select
     function loadMissions() {
-        fetch('http://localhost:3001/missions') // Récupérer les missions depuis JSON Server
+        fetch('http://localhost:3000/missions') // Récupérer les missions depuis JSON Server
             .then(response => response.json())
             .then(missions => {
                 missionSelect.innerHTML = ''; // Réinitialiser le sélecteur avant de le remplir
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour envoyer la candidature au backend (JSON Server)
     function submitCandidature(candidature) {
-        fetch('http://localhost:3001/candidatures', {
+        fetch('http://localhost:3000/candidatures', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

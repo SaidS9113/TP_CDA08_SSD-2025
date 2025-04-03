@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link du css pour le design -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Tableau de bord - Admin</title>
 </head>
+
 <body>
 
-  
+    <header id="header">
+        <!-- Navbar destock -->
+        <nav class="navbar-destock">
+            <!-- Logo -->
+            <h1 class="logo">InFreelance</h1>
+            <!-- Liste de liens pour destock -->
+            <ul class="liste-lien-destock">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
+                <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
+            </ul>
+            <!-- Navbar mobile -->
+            <div class="navbar-mobile">
+                <button class="burger-icon" id="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- Liste des liens pour petits appareils -->
+                <ul class="liste-lien-mobile" id="mobile-menu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="/dashboard-freelance.html">Tableau de Bord F</a></li>
+                    <li><a href="/admin/dashboard-admin.html">Tableau de Bord A</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <section id="add-mission">
         <h2>Ajouter une mission</h2>
-        
+
         <ul class="mission-list">
             <!-- Les missions seront ajoutées ici dynamiquement -->
         </ul>
@@ -32,9 +63,10 @@
             <button type="submit">Ajouter la mission</button>
         </form>
     </section>
-
+    <!-- Link des js pour les fonctionnalités -->
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/newMisson.js"></script>
 
 </body>
+
 </html>
