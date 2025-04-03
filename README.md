@@ -102,3 +102,8 @@ Ouvrir `index.html` dans un navigateur via Go Live via l'IDE pour voir les route
 
 - Installation de Live Server Preview
 - Dans l'ide cliquement sur Go live et un mon projet se demarre en https://127.0.0.1:5500/...
+
+### BONUS
+
+- Création d'une branch test
+- création d'un fichier .gitignore
