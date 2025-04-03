@@ -45,12 +45,22 @@
         <!-- Section des missions disponibles -->
         <section id="missions">
             <h2>Missions disponibles</h2>
-            <ul class="mission-list">
-                <!-- Les missions seront ajoutées ici dynamiquement -->
-            </ul>
+            <table class="missions-table">
+                <thead>
+                    <tr>
+                        <th class="missions-table__header">Titre</th>
+                        <th class="missions-table__header">Description</th>
+                        <th class="missions-table__header">Durée</th>
+                        <th class="missions-table__header">Salaire</th>
+                        <th class="missions-table__header">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="missions-table__body">
+                    <!-- Les missions seront ajoutées ici dynamiquement -->
+                </tbody>
+            </table>
         </section>
-        <!-- Section pour postuler -->
-
+        
         <!-- Section pour postuler -->
         <section id="postuler">
             <h2>Postuler</h2>
@@ -76,7 +86,7 @@
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/route.js"></script>
     <script src="/assets/js/newCandidature.js"></script>
-    <script src="/assets/js/newMission.js"></script>
+    <script src="/assets/js/showMissions.js"></script>
 </body>
 
 </html>

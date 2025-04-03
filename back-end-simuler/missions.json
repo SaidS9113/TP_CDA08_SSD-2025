@@ -13,27 +13,14 @@
       "description": "Génial !",
       "duree": "1 an",
       "salaire": "1800"
-    },
-    {
-      "id": "c788",
-      "titre": "Développeur symfony",
-      "description": "Top",
-      "duree": "4 ans",
-      "salaire": "2700"
     }
   ],
   "candidatures": [
     {
-      "id": "da31",
-      "nom": "SAID",
-      "email": "p@gmail.com",
-      "missionId": "6cba"
-    },
-    {
-      "id": "469b",
-      "nom": "p",
-      "email": "porche@gmail.com",
-      "missionId": "6cba"
+      "id": "21c4",
+      "nom": "Soilah",
+      "email": "soilahou@gmail.com",
+      "missionId": "ba15"
     }
   ]
 }

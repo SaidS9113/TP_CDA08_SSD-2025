@@ -87,7 +87,7 @@ Une gestion efficace du code source est assurée par :
 ### Lancement du Serveur JSON
 
 ```bash
-json-server --watch back-end-simuler/missions.json --port 3000
+json-server --watch back-end-simuler/missions.json --port 3001
 ```
 
 ### Lancement des routes
@@ -106,4 +106,5 @@ Ouvrir `index.html` dans un navigateur via Go Live via l'IDE pour voir les route
 ### BONUS
 
 - Création d'une branch test
+
 - création d'un fichier .gitignore

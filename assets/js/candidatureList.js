@@ -1,9 +1,10 @@
+alert("Bonjour !");
 document.addEventListener("DOMContentLoaded", function () {
     const candidatureTable = document.getElementById("candidature-table").getElementsByTagName("tbody")[0];
 
     // Fonction pour charger et afficher les candidatures depuis JSON Server
     function loadCandidatures() {
-        fetch('http://localhost:3000/candidatures') // Récupérer les candidatures depuis JSON Server
+        fetch('http://localhost:3001/candidatures') // Récupérer les candidatures depuis JSON Server
             .then(response => response.json())
             .then(candidatures => {
                 // Réinitialise le contenu du tableau avant de le remplir
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     row.appendChild(emailCell);
 
                     // Trouver la mission par son ID
-                    fetch(`http://localhost:3000/missions/${candidature.missionId}`)
+                    fetch(`http://localhost:3001/missions/${candidature.missionId}`)
                         .then(response => response.json())
                         .then(mission => {
                             const missionCell = document.createElement("td");
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour supprimer une candidature
     function deleteCandidature(id) {
-        fetch(`http://localhost:3000/candidatures/${id}`, {
+        fetch(`http://localhost:3001/candidatures/${id}`, {
             method: 'DELETE',
         })
         .then(() => {

@@ -1,77 +1,75 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Sélectionner toutes les sections avec la classe 'dashboard' et 'candidatures-list'
-    const forms = document.querySelectorAll(".candidatures-list");
-    const missionLists = document.querySelectorAll(".mission-list");
-
-    // Fonction pour charger et afficher les missions depuis JSON Server
-    function loadMissions() {
-        fetch('http://localhost:3000/missions')  // Assurez-vous que l'API est en cours d'exécution sur le port 3000
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('candidatures-list');
+    const titreInput = document.getElementById('titre');
+    const descriptionInput = document.getElementById('description');
+    const dureeInput = document.getElementById('duree');
+    const salaireInput = document.getElementById('salaire');
+    const missionList = document.querySelector('.mission-list');
+    
+    // Fonction pour récupérer les missions depuis le serveur
+    function fetchMissions() {
+        fetch('http://localhost:3001/missions')
             .then(response => response.json())
             .then(missions => {
-                missionLists.forEach(missionList => {
-                    missionList.innerHTML = ""; // Réinitialise la liste avant de la remplir
-
-                    missions.forEach((mission) => {
-                        const li = document.createElement("li");
-                        li.innerHTML = `
-                            <strong>${mission.titre}</strong> - ${mission.description} 
-                            (Durée: ${mission.duree}, Salaire: ${mission.salaire} €)
-                            <button onclick="deleteMission(${mission.id})">❌ Supprimer</button>
-                        `;
-                        missionList.appendChild(li);
-                    });
+                missionList.innerHTML = '';
+                missions.forEach(mission => {
+                    const li = document.createElement('li');
+                    li.textContent = `${mission.titre} - ${mission.description} - ${mission.duree} - ${mission.salaire}`;
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Supprimer';
+                    deleteButton.addEventListener('click', () => deleteMission(mission.id));
+                    li.appendChild(deleteButton);
+                    missionList.appendChild(li);
                 });
             })
-            .catch(error => console.error('Erreur:', error));
+            .catch(err => console.log('Erreur lors de la récupération des missions :', err));
     }
 
-    // Fonction pour envoyer la mission à JSON Server (requête POST)
-    function addMission(mission) {
-        fetch('http://localhost:3000/missions', {
+    // Fonction pour ajouter une mission
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const mission = {
+            titre: titreInput.value,
+            description: descriptionInput.value,
+            duree: dureeInput.value,
+            salaire: salaireInput.value
+        };
+
+        // Envoi des données au serveur pour ajouter la mission
+        fetch('http://localhost:3001/missions', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(mission),
+            body: JSON.stringify(mission)
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Mission ajoutée:', data);
-            alert('Mission ajoutée avec succès!');
-            loadMissions(); // Met à jour la liste des missions après ajout
+            // Effacer le formulaire après l'ajout
+            titreInput.value = '';
+            descriptionInput.value = '';
+            dureeInput.value = '';
+            salaireInput.value = '';
+
+            // Rafraîchir la liste des missions
+            fetchMissions();
         })
-        .catch(error => console.error('Erreur:', error));
-    }
+        .catch(err => console.log('Erreur lors de l\'ajout de la mission :', err));
+    });
 
     // Fonction pour supprimer une mission
-    window.deleteMission = function (id) {
-        fetch(`http://localhost:3000/missions/${id}`, {
+    function deleteMission(id) {
+        fetch(`http://localhost:3001/missions/${id}`, {
             method: 'DELETE',
         })
         .then(() => {
-            alert("Mission supprimée avec succès !");
-            loadMissions(); // Rafraîchit la liste des missions
+            // Rafraîchir la liste des missions après la suppression
+            fetchMissions();
         })
-        .catch(error => console.error('Erreur:', error));
-    };
-
-    // Écouteur d'événement pour soumettre le formulaire sur toutes les pages
-    forms.forEach(form => {
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Empêche le rechargement de la page
-
-            const mission = {
-                titre: form.querySelector('.titre').value,
-                description: form.querySelector('.description').value,
-                duree: form.querySelector('.duree').value,
-                salaire: form.querySelector('.salaire').value
-            };
-
-            addMission(mission); // Appel de la fonction pour envoyer la mission à l'API
-            form.reset(); // Réinitialiser le formulaire
-        });
-    });
+        .catch(err => console.log('Erreur lors de la suppression de la mission :', err));
+    }
 
     // Charger les missions au démarrage
-    loadMissions();
+    fetchMissions();
 });
